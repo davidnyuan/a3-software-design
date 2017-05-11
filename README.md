@@ -15,7 +15,7 @@ var chart = VoronoiChart();
 <b>VoronoiChart</b>() [<>](https://github.com/cjjaeger/a3-software-design/blob/master/js/VoronoiChart.js "Source")
 
 
-Data Joins[<>](https://github.com/cjjaeger/a3-software-design/blob/master/js/VoronoiChart.js#L29 "Source")
+Data Joins[<>](https://github.com/cjjaeger/a3-software-design/blob/master/js/VoronoiChart.js#104 "Source")
 You can call and do data joins in this format
 ```js
 var scatter = VoronoiChart();
@@ -37,4 +37,4 @@ Takes in an array of objects in this form:
 }
 ```
 you can also use the setter functions to modify some of the attributes of the VoronoiChart
-Setter functions[<>](https://github.com/cjjaeger/a3-software-design/blob/master/js/VoronoiChart.js#L207 "Source")
+Setter functions[<>](https://github.com/cjjaeger/a3-software-design/blob/master/js/VoronoiChart.js#L176 "Source")
