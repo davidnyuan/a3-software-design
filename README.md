@@ -33,8 +33,7 @@ charts.enter().append("div")
         .call(scatter);
 charts.exit().remove();
 ```
-Takes in an array of objects or an array of arrays of objects
-objects are in this form:
+Takes in an array of objects in this form:
 ```js
 {
     x: xValue,
