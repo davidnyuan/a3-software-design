@@ -22,14 +22,23 @@
     <h1>VoronoiChart</h1>
     <div class="row">
         <div class="input-field col s4">
-            <select>
+            <select id='xAxisSelector'>
             <option value="gdp">GDP</option>
             <option value="life_expectancy">Life Expectancy</option>
             <option value="fertility_rate">Fertility Rate</option>
             </select>
             <label>X Variable</label>
         </div>
+        <div class="input-field col s4">
+            <select id=radiusSelector>
+            <option value=3>3</option>
+            <option value=5>5</option>
+            <option value=7>7</option>
+            </select>
+            <label>Change Radius</label>
+        </div>
     </div>
+    <div id="slider7"></div>
     <div id="vis"></div>
 </body>
 
