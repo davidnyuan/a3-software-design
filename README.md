@@ -1,7 +1,12 @@
 # a3-software-design
 
 ```html
-<script src="https://d3js.org/d3-voronoi.v1.min.js"></script>
+<script src="https://code.jquery.com/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.css" />
+<script src="http://d3js.org/d3.v4.js"></script>
+<link rel="stylesheet" href="css/main.css" />
+<script src="js/VoronoiChart.js"></script>
 <script>
 
 var chart = VoronoiChart();

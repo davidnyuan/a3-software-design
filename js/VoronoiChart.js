@@ -105,6 +105,7 @@ var VoronoiChart = function() {
                 return [xScale(d.x), yScale(d.y), d.id];
             });
 
+
             //console.log(sites);
             var voronoi = d3.voronoi()
                 .x(function(d) { return d[0]; })
@@ -168,7 +169,7 @@ var VoronoiChart = function() {
                     .attr("cy", function(d) { return d[1]; })
                         .attr("r", radius);
             }
-
+            d3.select(".chartG path:first-of-type").style("fill", fill);
         });
 
     };
@@ -184,7 +185,7 @@ var VoronoiChart = function() {
         width = value;
         return chart;
     };
-
+    //fills the moused over polygon
     chart.fill = function(value) {
         if (!arguments.length) return fill;
         fill = value;
