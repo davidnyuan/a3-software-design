@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>a3</title>
+
+    <!-- Libraries -->
+    <script src="https://code.jquery.com/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.css" />
+
+
+    <script src="http://d3js.org/d3.v4.js"></script>
+
+    <!-- Custom files -->
+    <link rel="stylesheet" href="css/main.css" />
+</head>
+
+<body class="container">
+    <h1>VoronoiChart shit</h1>
+    <div class="row">
+        <div class="input-field col s4">
+            <select>
+            <option value="gdp">GDP</option>
+            <option value="life_expectancy">Life Expectancy</option>
+            <option value="fertility_rate">Fertility Rate</option>
+            </select>
+            <label>X Variable</label>
+        </div>
+    </div>
+    <div id="vis"></div>
+</body>
+
+<!-- your script file -->
+<script src="js/main.js"></script>
+<script src="js/VoronoiChart.js"></script>
+
+
+</html>

@@ -1,0 +1,36 @@
+.chartG line {
+  stroke: #000;
+  stroke-opacity: 0.2;
+}
+
+.chartG path {
+  fill: none;
+  stroke: #000;
+}
+
+.chartG>path:first-child {
+  fill: #f00;
+}
+
+.chartG circle {
+  fill: #000;
+  stroke: #fff;
+}
+
+.chartG circle :first-child {
+  fill: #fff;
+}
+
+.axis line,
+.axis path {
+  fill: none;
+  stroke: #000;
+}
+
+.title {
+  text-anchor: middle;
+}
+
+.chart {
+  display: inline-block;
+}
