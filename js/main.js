@@ -21,11 +21,14 @@ $(function() {
 
         }
         var scatter = VoronoiChart().width(700).height(400);
-        scatter.title("Whattwlkjdf")
+
         prepData();
 
         var draw = function() {
             prepData();
+            scatter.title("Chart");
+            scatter.xTitle(xVar);
+            scatter.yTitle(yVar);
             var charts = d3.select('#vis').selectAll('.chart')
                 .data([chartData]);
                 charts.enter().append("div")

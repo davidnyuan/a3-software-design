@@ -16,13 +16,11 @@ var VoronoiChart = function() {
             right: 10,
         };
     var dataKey ="chartG";
+    var sites ;
     var chart = function(selection) {
         var chartHeight = height - margin.bottom - margin.top;
         var chartWidth = width - margin.left - margin.right;
         selection.each(function(datas) {
-            
-            console.log(datas);
-
 
             var ele = d3.select(this);
             var svg = ele.selectAll("svg").data([datas]);
@@ -42,14 +40,6 @@ var VoronoiChart = function() {
                 .attr("height", chartHeight)
                 .attr('transform', 'translate(' + margin.left + ',' + margin.top + ')')
                 .attr("class", 'chartG').on("mousemove", moved);
-            // var linkchart = chartG.append("g")
-            //     .attr("class", "links");
-            // var siteschart = chartG.append("g")
-            //     .attr("class", "sites");
-            // var polychart = chartG.append("g")
-            //     .attr("class", "polygons");
-
-
             // Append axes to the svgEnter element
             svgEnter.append('g')
                 .attr('transform', 'translate(' + margin.left + ',' + (chartHeight +margin.top) + ')')
@@ -111,7 +101,7 @@ var VoronoiChart = function() {
             ele.select('.title.x').text(xTitle);
             ele.select('.title.y').text(yTitle);
 
-            var sites = datas.map(function(d) {
+            sites = datas.map(function(d) {
                 return [xScale(d.x), yScale(d.y), d.id];
             });
 
@@ -144,40 +134,19 @@ var VoronoiChart = function() {
                 link.exit().remove();
 
             function moved() {
-                console.log(sites);
                 sites[0] = d3.mouse(this);
                 redraw();
             }
 
             function redraw() {
-                //console.log(sites);
-                //var diagram = voronoi(sites);
-                // var links = d3.select('.chartG')
-                //     .selectAll("line")
-                //     .data(voronoi.links(sites)).exit().remove();
-                    // polygon = polygon.data(voronoi.polygons(sites)).call(redrawPolygon);
-                    // link = link.data(voronoi.links(sites)), link.exit().remove();
-                    // link = link.enter().append("line").merge(link).call(redrawLink);
-                    // site = siteEnter.data(sites).call(redrawSite);
-
-
-                    polygon =d3.select(".chartG")
-                        .selectAll("path").data(voronoi.polygons(sites)).call(redrawPolygon);
-                    link =  d3.select('.chartG')
-                        .selectAll("line").data(voronoi.links(sites), function(d){
-                            return d[2];
-                        });
-                    linkEnter = link.enter().append("line").merge(link).call(redrawLink);
-
-
-                    link.exit().remove();
-
-
-
-                // polygonEnter = polygonEnter.data(voronoi.polygons(sites)).call(redrawPolygon);
-                // linkEnter = linkEnter.data(voronoi.links(sites)), link.exit().remove();
-                // linkEnter = linkEnter.enter().append("line").merge(linkEnter).call(redrawLink);
-                // siteEnter = siteEnter.data(sites).call(redrawSite);
+                polygon =d3.select(".chartG")
+                    .selectAll("path").data(voronoi.polygons(sites)).call(redrawPolygon);
+                link =  d3.select('.chartG')
+                    .selectAll("line").data(voronoi.links(sites), function(d){
+                        return d[2];
+                    });
+                linkEnter = link.enter().append("line").merge(link).call(redrawLink);
+                link.exit().remove();
 
             }
 
